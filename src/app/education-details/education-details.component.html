@@ -1,0 +1,53 @@
+ <form [formGroup]="EducationDetailGroup">
+  <div class="form-container">
+    <div class="horizontal-form">
+      <mat-form-field appearance="outline">
+        <mat-label>College Name</mat-label>
+        <input matInput placeholder="College Name" formControlName="collegeName">
+        <mat-error
+          *ngIf="EducationDetailGroup.get('collegeName')?.touched && EducationDetailGroup.get('collegeName')?.invalid">
+          college name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Degree</mat-label>
+        <input matInput placeholder="" formControlName="degree">
+        <mat-error *ngIf="EducationDetailGroup.get('degree')?.touched && EducationDetailGroup.get('degree')?.invalid">
+          degree is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="horizontal-form">
+
+      <!-- <mat-form-field appearance="outline">
+        <mat-label>years</mat-label>
+        <mat-select formControlName="years">
+          <mat-option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="EducationDetailGroup.get('years')?.invalid && EducationDetailGroup.get('years')?.touched">
+          year is required
+        </mat-error>
+      </mat-form-field> -->
+
+      <mat-form-field appearance="outline">
+        <mat-label>city</mat-label>
+        <input matInput placeholder="city" formControlName="city">
+        <mat-error *ngIf="EducationDetailGroup.get('city')?.touched && EducationDetailGroup.get('city')?.invalid">
+          city is required
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>hi dummy</mat-label>
+        <input matInput placeholder="dummy" formControlName="dummy">
+
+      </mat-form-field>
+
+    </div>
+
+  </div>
+</form>
+ 

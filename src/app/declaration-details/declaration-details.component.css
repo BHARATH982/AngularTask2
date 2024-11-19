@@ -1,0 +1,14 @@
+.form-container mat-form-field {
+    width: 100%;      
+    max-width: 300px; 
+}
+
+.horizontal-form {
+    display: flex;
+    gap: 100px;
+}
+
+.full-width {
+    width: 100%;
+}
+    

@@ -1,0 +1,19 @@
+<div [formGroup]="parentDetailGroup">
+    <div class="form-container">        
+      <div class="horizontal-form">  
+        <mat-form-field appearance="outline">
+          <mat-label>"Father name</mat-label>
+          <input matInput placeholder="Father name" formControlName="fatherName" required>
+          <mat-error *ngIf="parentDetailGroup.get('fatherName')?.touched && parentDetailGroup.get('fatherName')?.invalid">
+            "Father name is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Mother name</mat-label>
+          <input matInput placeholder="Mother name" formControlName="motherName" required>
+          <mat-error *ngIf="parentDetailGroup.get('motherName')?.touched && parentDetailGroup.get('motherName')?.invalid">
+            Mother name is required
+        </mat-error>
+        </mat-form-field>
+     </div>
+</div>

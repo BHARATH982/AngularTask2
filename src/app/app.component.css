@@ -1,0 +1,21 @@
+.nav-bg{
+    background-color: black;
+}
+.custom-table {
+    background-color:rgba(0, 0, 0, 0.679);
+    border-radius: 8px;
+  }
+  
+  .custom-table1{
+    background-color: white; /* Material blue */
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .custom-table2  {
+    color: #333;
+  }
+  
+  .custom-table3 {
+    background-color: #4bff14; /* Light cyan */
+  }

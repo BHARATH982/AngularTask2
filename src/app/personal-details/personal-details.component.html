@@ -1,0 +1,64 @@
+<div [formGroup]="personalDetailGroup">
+    <div class="form-container">      
+
+      <div class="horizontal-form">  
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" formControlName="firstName" required>
+          <mat-error *ngIf="personalDetailGroup.get('firstName')?.touched && personalDetailGroup.get('lastName')?.invalid">
+            first name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last name" formControlName="lastName" required>
+          <mat-error *ngIf="personalDetailGroup.get('lastName')?.touched && personalDetailGroup.get('lastName')?.invalid">
+            last name is required
+        </mat-error>
+        </mat-form-field>
+
+     </div>
+
+     <div class="horizontal-form"> 
+
+      <div class="radio-group">
+        <label>Gender:</label>
+         <br>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button *ngFor="let gender of genders" [value]="gender">
+            {{ gender }}
+        </mat-radio-button>
+      </mat-radio-group>
+
+      </div>
+     
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email" required>
+        <mat-error *ngIf="personalDetailGroup.get('email')?.touched && personalDetailGroup.get('email')?.invalid">
+          email is required
+        </mat-error>
+      </mat-form-field>
+     </div>
+   
+     <div class="horizontal-form"> 
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input matInput formControlName="phoneNumber" placeholder="Enter your phonenumber" required>
+        <mat-error *ngIf="personalDetailGroup.get('phoneNumber')?.touched && personalDetailGroup.get('phoneNumber')?.invalid">
+          phone number is required
+        </mat-error>
+      </mat-form-field>
+
+   
+     
+     </div>
+
+
+    </div>
+</div>
+
